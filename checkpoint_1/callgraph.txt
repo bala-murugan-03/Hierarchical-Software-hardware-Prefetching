@@ -1,0 +1,15 @@
+Caller -> Callee
+make_request_text -> xorshift64
+make_request_text -> xorshift64
+make_request_text -> xorshift64
+worker_fn -> dequeue_request
+worker_fn -> make_request_text
+worker_fn -> parse_request_text
+worker_fn -> server_log
+worker_fn -> business_logic_sim
+worker_fn -> db_lookup_update
+worker_fn -> fake_compress
+worker_fn -> server_log
+generator_fn -> enqueue_request
+generator_fn -> xorshift64
+main -> db_init
