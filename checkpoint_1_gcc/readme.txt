@@ -1,33 +1,15 @@
-# Function Bundle Analyzer
+bash requirements.sh 
 
-## Prerequisites
+TO download all the required libraries.
 
-This tool requires the C++ compiler (`g++`) and development libraries for three external dependencies. This guide assumes a Debian/Ubuntu-based Linux environment.
+wget https://raw.githubusercontent.com/nlohmann/json/develop/single_include/nlohmann/json.hpp
 
-| Dependency | Purpose |
-| :--- | :--- |
-| **g++/build-essential** | C++ Compiler and Core Build Tools |
-| **libelf-dev** | Read and parse ELF file structure (`gelf.h`, `libelf.h`) |
-| **libcapstone-dev** | Disassemble machine code and find `CALL` instructions |
-| **nlohmann/json** | Header-only library for generating JSON output (`json.hpp`) |
+To donwload the nlohmans directory 
 
-***
+Compiling the server based C application
 
-## Setup and Installation
+gcc -O0 -g server.c -o server
 
-Follow these steps to install the required system libraries and set up the JSON header file.
+Compilation of the bundles program
 
-### 1. Install System Dependencies
-
-Run the following commands to install the necessary development packages:
-
-```bash
-# Update package lists and install core tools, libelf, and capstone
-sudo apt update
-sudo apt install -y build-essential libelf-dev libcapstone-dev
-
-## Download nlohmann/json Header
-
-```bash 
-wget [https://raw.githubusercontent.com/nlohmann/json/develop/single_include/nlohmann/json.hpp](https://raw.githubusercontent.com/nlohmann/json/develop/single_include/nlohmann/json.hpp) \
-    -O lib/nlohmann/json.hpp
+g++ -O0 -g bundle_analyzer.cpp -o bundle_analyzer -lcapstone -lelf -I./lib
