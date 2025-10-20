@@ -1,0 +1,49 @@
+{
+    "BundleEntries": [
+        {
+            "end": 5397,
+            "entry": "make_request_text",
+            "functions": [
+                "make_request_text",
+                "xorshift64"
+            ],
+            "id": 1,
+            "reachable_bytes": 540,
+            "start": 5073,
+            "static_size_bytes": 324
+        },
+        {
+            "end": 6334,
+            "entry": "parse_request_text",
+            "functions": [
+                "parse_request_text"
+            ],
+            "id": 2,
+            "reachable_bytes": 527,
+            "start": 5807,
+            "static_size_bytes": 527
+        },
+        {
+            "end": 7964,
+            "entry": "worker_fn",
+            "functions": [
+                "worker_fn",
+                "dequeue_request",
+                "make_request_text",
+                "xorshift64",
+                "parse_request_text",
+                "server_log",
+                "business_logic_sim",
+                "db_lookup_update",
+                "fake_compress"
+            ],
+            "id": 3,
+            "reachable_bytes": 3112,
+            "start": 7369,
+            "static_size_bytes": 595
+        }
+    ],
+    "binary": "server",
+    "threshold_bytes": 512,
+    "timestamp": "Mon Oct 20 15:44:14 2025\n"
+}

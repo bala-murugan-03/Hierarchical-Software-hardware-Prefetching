@@ -1,0 +1,151 @@
+{
+    "BundleEntries": [
+        {
+            "end": 5397,
+            "entry": "make_request_text",
+            "functions": [
+                "make_request_text",
+                "xorshift64"
+            ],
+            "id": 1,
+            "reachable_bytes": 540,
+            "start": 5073,
+            "static_size_bytes": 324
+        },
+        {
+            "end": 5557,
+            "entry": "enqueue_request",
+            "functions": [
+                "enqueue_request"
+            ],
+            "id": 2,
+            "reachable_bytes": 160,
+            "start": 5397,
+            "static_size_bytes": 160
+        },
+        {
+            "end": 5807,
+            "entry": "dequeue_request",
+            "functions": [
+                "dequeue_request"
+            ],
+            "id": 3,
+            "reachable_bytes": 250,
+            "start": 5557,
+            "static_size_bytes": 250
+        },
+        {
+            "end": 6334,
+            "entry": "parse_request_text",
+            "functions": [
+                "parse_request_text"
+            ],
+            "id": 4,
+            "reachable_bytes": 527,
+            "start": 5807,
+            "static_size_bytes": 527
+        },
+        {
+            "end": 6640,
+            "entry": "business_logic_sim",
+            "functions": [
+                "business_logic_sim"
+            ],
+            "id": 5,
+            "reachable_bytes": 306,
+            "start": 6334,
+            "static_size_bytes": 306
+        },
+        {
+            "end": 6916,
+            "entry": "db_lookup_update",
+            "functions": [
+                "db_lookup_update"
+            ],
+            "id": 6,
+            "reachable_bytes": 276,
+            "start": 6640,
+            "static_size_bytes": 276
+        },
+        {
+            "end": 7204,
+            "entry": "fake_compress",
+            "functions": [
+                "fake_compress"
+            ],
+            "id": 7,
+            "reachable_bytes": 288,
+            "start": 6916,
+            "static_size_bytes": 288
+        },
+        {
+            "end": 7369,
+            "entry": "server_log",
+            "functions": [
+                "server_log"
+            ],
+            "id": 8,
+            "reachable_bytes": 165,
+            "start": 7204,
+            "static_size_bytes": 165
+        },
+        {
+            "end": 7964,
+            "entry": "worker_fn",
+            "functions": [
+                "worker_fn",
+                "dequeue_request",
+                "make_request_text",
+                "xorshift64",
+                "parse_request_text",
+                "server_log",
+                "business_logic_sim",
+                "db_lookup_update",
+                "fake_compress"
+            ],
+            "id": 9,
+            "reachable_bytes": 3112,
+            "start": 7369,
+            "static_size_bytes": 595
+        },
+        {
+            "end": 8209,
+            "entry": "generator_fn",
+            "functions": [
+                "generator_fn",
+                "enqueue_request",
+                "xorshift64"
+            ],
+            "id": 10,
+            "reachable_bytes": 477,
+            "start": 7964,
+            "static_size_bytes": 245
+        },
+        {
+            "end": 8452,
+            "entry": "db_init",
+            "functions": [
+                "db_init"
+            ],
+            "id": 11,
+            "reachable_bytes": 243,
+            "start": 8209,
+            "static_size_bytes": 243
+        },
+        {
+            "end": 8715,
+            "entry": "main",
+            "functions": [
+                "main",
+                "db_init"
+            ],
+            "id": 12,
+            "reachable_bytes": 506,
+            "start": 8452,
+            "static_size_bytes": 263
+        }
+    ],
+    "binary": "server",
+    "threshold_bytes": 102,
+    "timestamp": "Mon Oct 20 15:44:52 2025\n"
+}
