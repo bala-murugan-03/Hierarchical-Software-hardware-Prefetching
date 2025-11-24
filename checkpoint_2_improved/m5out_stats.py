@@ -1,24 +1,10 @@
 #!/usr/bin/env python3
-"""
-compute_m5_stats_clean.py
 
-Usage:
-  # Single-run summary
-  ./m5_stats.py m5out_baseline/stats.txt
-
-  # Compare baseline vs prefetch
-  ./m5_stats.py m5out_baseline/stats.txt m5out_prefetch/stats.txt
-
-Outputs:
-  - Instructions, Cycles, IPC, CPI
-  - L1D/L1I/L2 misses and MPKI
-  - If two files are provided, prints IPC speedup and MPKI deltas.
-"""
 
 import sys
 import math
 
-# --- stat keys used in your runs ---
+
 KEY_INSTR = "simInsts"
 KEY_CYCLES = "system.cpu.numCycles"
 KEY_IPC = "system.cpu.ipc"

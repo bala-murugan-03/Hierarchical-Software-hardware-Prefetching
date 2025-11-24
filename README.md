@@ -5,9 +5,9 @@
 
 ## Installation of required dependencies:
 
-- **sudo apt install llvm clang libclang-dev llvm-dev** (Used to convert a C file which is similar to server workload to LLVM)
-- **sudo apt install graphviz** (Used to convert the dot file into png)
-- **sudo apt install nlohmann-json3-dev** (used in callgraph_bundle.cpp)
+- 'sudo apt install llvm clang libclang-dev llvm-dev' (Used to convert a C file which is similar to server workload to LLVM)
+- 'sudo apt install graphviz' (Used to convert the dot file into png)
+- 'sudo apt install nlohmann-json3-dev' (used in callgraph_bundle.cpp)
 
 After the installation of above dependencies, change directory to checkpoint_1_llvm,
 

@@ -1,13 +1,4 @@
 #!/usr/bin/env python3
-"""
-map_bundles_to_pcs.py
-Usage:
-  ./map_bundles_to_pcs.py server_sim bundles.json bundles_pc.json
-
-This reads bundles.json (function names and start/end instruction indices),
-looks up functions in the binary (objdump -d or nm),
-and writes bundles_pc.json where start_pc/end_pc are actual binary addresses (hex).
-"""
 
 import sys
 import json
@@ -27,7 +18,7 @@ p = subprocess.run(["objdump", "-d", binary], stdout=subprocess.PIPE, stderr=sub
 asm = p.stdout
 
 # 2) build map: function_name -> (start_addr, end_addr)
-# objdump prints: "0000000000401130 <function_name>:"
+
 func_starts = {}
 func_order = []
 for line in asm.splitlines():
@@ -39,6 +30,7 @@ for line in asm.splitlines():
         func_order.append((addr, name))
 
 # sort functions by address so we can estimate end address as next func - 1
+
 func_order.sort()
 
 func_ranges = {}
@@ -52,6 +44,7 @@ for i, (addr, name) in enumerate(func_order):
     func_ranges[name] = (start, end)
 
 # 3) load bundles.json and map functions to addresses
+
 with open(infile) as f:
     j = json.load(f)
 

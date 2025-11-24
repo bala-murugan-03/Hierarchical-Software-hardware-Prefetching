@@ -20,7 +20,7 @@ static bundle_t bundles[MAX_BUNDLES];
 static int bundle_count = 0;
 
 static uint64_t hex_to_u64(const char *s) {
-    // Handles "0x..." or plain hex/decimal strings
+
     return strtoull(s, NULL, 0);
 }
 
@@ -55,7 +55,7 @@ void load_bundles_json(const char *path) {
         strncpy(bundles[bundle_count].name, q, n);
         bundles[bundle_count].name[n] = '\0';
 
-        // find start_pc after r
+	// to find start pc 
         uint64_t startv = 0, endv = 0;
         const char *start_key = strstr(r, "\"start_pc\"");
         if (start_key) {
@@ -72,7 +72,7 @@ void load_bundles_json(const char *path) {
                         startv = hex_to_u64(tmp);
                     }
                 } else {
-                    // number without quotes
+
                     s++;
                     char tmp[64]; int t=0;
                     while (*s && t < 63 && ( (*s>='0'&&*s<='9') || (*s>='a'&&*s<='f') || (*s>='A'&&*s<='F') || *s=='x' )) tmp[t++]=*s++;
@@ -139,6 +139,6 @@ void bundle_prefetch_by_name(const char *fname) {
             return;
         }
     }
-    // not found => no-op
+  
 }
 

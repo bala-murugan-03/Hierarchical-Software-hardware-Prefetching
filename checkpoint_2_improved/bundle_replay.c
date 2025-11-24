@@ -31,8 +31,7 @@ static void page_align_range(uintptr_t s, uintptr_t e, uintptr_t *ps, uintptr_t 
     *pe = end_page;
 }
 
-/* Robust tiny JSON-ish parser: extract numbers after "start_pc" and "end_pc".
-   Accepts hex (0x...) or decimal. */
+/* Tiny JSON-ish parser: extract numbers after "start_pc" and "end_pc". */
 static int parse_bundle_file(const char *path) {
     FILE *f = fopen(path, "r");
     if (!f) {
@@ -170,7 +169,7 @@ int bundles_prefetch_for_pc(uintptr_t pc, int use_madvise, int do_prefetch_lines
         madvise_range(b->start_page, b->end_page);
     }
     if (do_prefetch_lines) {
-        /* try prefetching a small number of lines inside the bundle range */
+        /* Try prefetching a small number of lines inside the bundle range */
         prefetch_lines_in_range(b->start_pc, b->end_pc, 8);
     }
     return 1;
