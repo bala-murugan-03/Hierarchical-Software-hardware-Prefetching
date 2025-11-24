@@ -50,6 +50,10 @@ Then change to gem5 directory and build gem5, we used gem5.fast version,
 
 ## Execution of files
 
+Mapping of bundles.json to Hexadecimal Addresses:
+
+**./map_bundles_to_pcs.py ./server_sim bundles.json bundles_pc.json**
+
 ### Initial Prefetching Strategy Execution
 
 **clang -O2 -g server_sim_prefetch.c bundle_replay.c -o server_sim_prefetch**
