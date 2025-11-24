@@ -1,0 +1,58 @@
+{
+    "BundleEntries": [
+        {
+            "end_pc": 359,
+            "function": "business_logic_sim",
+            "reachable_size": 62,
+            "start_pc": 298
+        },
+        {
+            "end_pc": 733,
+            "function": "db_init",
+            "reachable_size": 58,
+            "start_pc": 676
+        },
+        {
+            "end_pc": 432,
+            "function": "db_lookup_update",
+            "reachable_size": 73,
+            "start_pc": 360
+        },
+        {
+            "end_pc": 522,
+            "function": "fake_compress",
+            "reachable_size": 90,
+            "start_pc": 433
+        },
+        {
+            "end_pc": 675,
+            "function": "generator_fn",
+            "reachable_size": 78,
+            "start_pc": 641
+        },
+        {
+            "end_pc": 792,
+            "function": "main",
+            "reachable_size": 117,
+            "start_pc": 734
+        },
+        {
+            "end_pc": 51,
+            "function": "make_request_text",
+            "reachable_size": 130,
+            "start_pc": 0
+        },
+        {
+            "end_pc": 297,
+            "function": "parse_request_text",
+            "reachable_size": 180,
+            "start_pc": 118
+        },
+        {
+            "end_pc": 640,
+            "function": "worker_fn",
+            "reachable_size": 616,
+            "start_pc": 541
+        }
+    ]
+}
