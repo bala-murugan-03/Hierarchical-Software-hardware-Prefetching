@@ -48,7 +48,7 @@ Then change to gem5 directory and build gem5, we used gem5.fast version,
 
 **scons -j$(nproc) build/X86/gem5.fast**
 
-##Execution of files
+## Execution of files
 
 ### Initial Prefetching Strategy Execution
 
